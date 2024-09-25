@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Cryptonavbar from './Nav bar/Cryptonavbar';
+import { Route, Routes } from 'react-router-dom';
+import Homecrypto from './Pages/Home/Homecrypto';
+import Coin from './Pages/coin/Coin';
+import Footer from './Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Cryptonavbar />
+      <Routes>
+        <Route path='/' element={<Homecrypto />} />
+        <Route path='/coin/:coinId' element={<Coin />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

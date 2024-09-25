@@ -1,0 +1,132 @@
+.home {
+    padding: 0px 10px;
+    padding-bottom: 100px;
+}
+
+.home .hero {
+    max-width: 600px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.home .hero .hero_head {
+    font-size: max(4vw, 36px);
+}
+
+.hero .hero_para {
+    width: 75%;
+    color: #e3e3e3;
+    line-height: 1.5;
+}
+
+.hero .form_gero {
+    padding: 8px;
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero .form_gero .form_input {
+    flex: 1;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+
+.hero .form_gero .form_search_btn {
+    border: none;
+    background-color: #7927ff;
+    color: white;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.crypto_table {
+    max-width: 800px;
+    margin: auto;
+    background: linear-gradient(rgba(84, 3, 255, 0.15), rgba(105, 2, 153, 0.15));
+    border-radius: 15px;
+}
+
+.table_layout {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
+    padding: 15px 20px;
+    align-items: center;
+    border-bottom: 1px solid #3c3c3c;
+}
+
+.market_cap {
+    text-align: right;
+}
+
+.table_layout:last-child {
+    border: none;
+}
+
+.table_layout .list_of_coins {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.table_layout .list_of_coins img {
+    width: 35px;
+}
+
+.table_layout .green {
+    color: #00D515;
+    text-align: center;
+}
+
+.table_layout .red {
+    color: #ff4646;
+    text-align: center;
+}
+
+@media screen and (min-width:320px) and (max-width:768px) {
+    .table_layout {
+        grid-template-columns: 0.5fr 3fr 1fr 1fr;
+        padding: 15px 3px;
+    }
+
+    .market_cap {
+        display: none;
+    }
+
+    .hero .form_gero {
+        padding: 0px;
+        width: 94%;
+        background-color: transparent;
+        flex-direction: column;
+    }
+
+    .hero .form_gero .form_input {
+        padding: 10px;
+    }
+
+    .home .hero {
+        margin: 30px auto;
+    }
+
+    .table_layout .list_of_coins {
+        gap: 2px;
+    }
+
+    .home {
+        padding: 0px 2px;
+        padding-bottom: 30px;
+    }
+}
